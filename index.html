@@ -1,2 +1,122 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MCP Fantasy — Personal Fantasy Football Assistant</title><style>body{margin:0;background:#101820;color:#eaf0f5;font:18px/1.65 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:72px 24px}h1{font-size:48px;line-height:1.1}h2{font-size:24px;margin-top:36px}a{color:#8ddfbd}.tag{color:#8ddfbd}footer{border-top:1px solid #42505c;margin-top:48px;padding-top:24px;font-size:14px;color:#b8c4cf}</style></head><body><main><p class="tag">PERSONAL PROJECT · IN DEVELOPMENT</p><h1>MCP Fantasy</h1><p>A private fantasy football assistant for one Yahoo Fantasy Sports account, built to support informed lineup and waiver decisions.</p><h2>What it will do</h2><p>A locally run Model Context Protocol (MCP) integration will retrieve authorized fantasy league settings, rosters, matchups, standings, player statistics, available players and transaction history. An AI assistant will use that information to provide lineup analysis and weekly waiver recommendations.</p><h2>Access and privacy</h2><p>The planned integration requests read-only access through Yahoo authorization. It will not submit waiver claims, execute trades or change lineups. The intended user is the project owner; this is not a public or commercial service.</p><p>Credentials and authorization tokens will be kept locally and excluded from this public website and its repository. Relevant fantasy data will be shared with the owner's AI assistant for analysis, subject to that service's data policies. This informational page contains no analytics, login form or account data.</p><h2>Project status</h2><p>In development. Yahoo Fantasy API access and integration security review are pending. This page does not provide a working account connection.</p><p>Maintained by <a href="https://github.com/m4rtian">m4rtian</a>. Project questions can be raised through <a href="https://github.com/m4rtian/mcp-fantasy/issues">GitHub issues</a>. Do not post credentials or private league information.</p><footer>Independent personal project. Not affiliated with or endorsed by Yahoo. Yahoo and Yahoo Fantasy Sports are trademarks of their respective owners.</footer></main></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MCP Fantasy is a privacy-conscious, read-only Yahoo Fantasy Football assistant in development.">
+    <title>MCP Fantasy — Read-only fantasy football intelligence</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #09111a;
+        --surface: #111d29;
+        --surface-light: #172637;
+        --text: #f3f7fa;
+        --muted: #a9b8c6;
+        --accent: #7ce3bb;
+        --line: #26394b;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 80% 0%, rgba(38, 124, 96, 0.28), transparent 32rem),
+          var(--background);
+        color: var(--text);
+        font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main { width: min(920px, calc(100% - 40px)); margin: 0 auto; padding: 88px 0 56px; }
+      header { max-width: 760px; padding-bottom: 56px; }
+      h1 { margin: 12px 0 20px; font-size: clamp(48px, 9vw, 80px); line-height: 0.98; letter-spacing: -0.05em; }
+      h2 { margin: 0 0 14px; font-size: 24px; letter-spacing: -0.02em; }
+      p { margin: 0 0 18px; }
+      a { color: var(--accent); text-underline-offset: 4px; }
+      a:hover { text-decoration-thickness: 2px; }
+
+      .eyebrow { color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+      .lede { color: var(--muted); font-size: clamp(20px, 3vw, 26px); line-height: 1.45; }
+      .status { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 14px; }
+      .status::before { width: 8px; height: 8px; border-radius: 50%; background: #f4c95d; content: ""; }
+
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .card { padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, var(--surface-light), var(--surface)); }
+      .card p, .card li { color: var(--muted); }
+      .card ul { margin: 0; padding-left: 20px; }
+      .card li + li { margin-top: 8px; }
+      .wide { grid-column: 1 / -1; }
+      .flow { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 22px; color: var(--muted); text-align: center; }
+      .flow strong { display: block; color: var(--text); }
+      .arrow { color: var(--accent); font-size: 24px; }
+
+      footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+
+      @media (max-width: 680px) {
+        main { padding-top: 56px; }
+        .grid { grid-template-columns: 1fr; }
+        .wide { grid-column: auto; }
+        .flow { align-items: stretch; flex-direction: column; text-align: left; }
+        .arrow { transform: rotate(90deg); align-self: center; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Personal project · privacy first</p>
+        <h1>MCP Fantasy</h1>
+        <p class="lede">A read-only fantasy football assistant designed to turn authorized Yahoo league context into clearer lineup and waiver decisions.</p>
+        <p class="status">Early development</p>
+      </header>
+
+      <section class="grid" aria-label="Project overview">
+        <article class="card">
+          <h2>What it will analyze</h2>
+          <ul>
+            <li>League settings and standings</li>
+            <li>Rosters and weekly matchups</li>
+            <li>Available players and statistics</li>
+            <li>Recent transaction history</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>What it will never do</h2>
+          <ul>
+            <li>Submit waiver claims</li>
+            <li>Drop or trade players</li>
+            <li>Change a starting lineup</li>
+            <li>Expose credentials or league data</li>
+          </ul>
+        </article>
+
+        <article class="card wide">
+          <h2>Planned workflow</h2>
+          <p>The integration is intentionally small and local. It retrieves only authorized fantasy context and presents recommendations for the owner to review.</p>
+          <div class="flow" aria-label="Yahoo API to local MCP integration to AI assistant to analysis">
+            <span><strong>Yahoo API</strong>Read-only data</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span><strong>Local MCP</strong>Selected context</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span><strong>AI assistant</strong>Reasoned guidance</span>
+            <span class="arrow" aria-hidden="true">→</span>
+            <span><strong>Owner</strong>Final decision</span>
+          </div>
+        </article>
+
+        <article class="card wide">
+          <h2>Privacy by design</h2>
+          <p>OAuth credentials and tokens stay local. This public repository contains only this informational site—no private integration, account identifiers, rosters, or league data.</p>
+          <p>Yahoo API access and the integration security review are still pending. There is no working account connection on this page.</p>
+          <p><a href="https://github.com/m4rtian/mcp-fantasy">View the project on GitHub</a> · <a href="https://github.com/m4rtian">More from m4rtian</a></p>
+        </article>
+      </section>
+
+      <footer>
+        Independent personal project. Not affiliated with or endorsed by Yahoo. Yahoo and Yahoo Fantasy Sports are trademarks of their respective owners.
+      </footer>
+    </main>
+  </body>
+</html>
