@@ -1,0 +1,5 @@
+.env*
+*oauth*.json
+*secret*
+*.pem
+*.key
