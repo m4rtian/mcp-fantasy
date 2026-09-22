@@ -2,7 +2,9 @@
 
 A privacy-conscious, read-only fantasy football assistant for Yahoo Fantasy Sports.
 
-> **Status:** Early development. Yahoo API access and the integration security review are still pending. This repository currently contains the public project site—not the private integration or account data.
+> **Status:** Milestone 1 is live: a browser-only analysis demo using fictional data. Yahoo API access and the integration security review are still pending.
+
+**[Open the fictional analysis demo](https://m4rtian.github.io/mcp-fantasy/demo.html)**
 
 ## Why this project exists
 
@@ -45,7 +47,7 @@ Yahoo Fantasy Sports API
 
 ## Public repository scope
 
-This repository contains only the static informational site in [`index.html`](./index.html). The private integration, local configuration, authorization material, and account data are deliberately excluded.
+This repository contains the static informational site and a fictional, browser-only decision brief. The private integration, local configuration, authorization material, and account data are deliberately excluded.
 
 ## Security and privacy
 

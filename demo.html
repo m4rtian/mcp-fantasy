@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MCP Fantasy — Fictional analysis demo</title>
+  <style>
+    :root{color-scheme:dark;--bg:#09111a;--card:#142231;--line:#294054;--text:#f3f7fa;--muted:#a9b8c6;--accent:#7ce3bb}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#16493888,transparent 35rem),var(--bg);color:var(--text);font:16px/1.55 system-ui,sans-serif}
+    main{width:min(1050px,calc(100% - 32px));margin:auto;padding:48px 0}a{color:var(--accent)}h1{font-size:clamp(36px,7vw,64px);margin:.2em 0}.lede,.muted{color:var(--muted)}
+    .notice{border:1px solid #806c2b;background:#2a2412;padding:12px 16px;border-radius:12px}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:26px}.card{background:linear-gradient(145deg,#182a3b,var(--card));border:1px solid var(--line);border-radius:18px;padding:24px}
+    table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:13px}.good{color:var(--accent)}.warn{color:#f4c95d}.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:4px 9px;color:var(--muted);font-size:13px}
+    @media(max-width:750px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <p><a href="index.html">← Project overview</a></p>
+  <span class="pill">Milestone 1 · local demo</span><h1>Weekly decision brief</h1>
+  <p class="lede">A browser-only demonstration of the planned read-only analysis workflow.</p>
+  <p class="notice"><strong>Fictional data only.</strong> No Yahoo connection, credentials, league identifiers, or real roster data are used.</p>
+  <section class="grid">
+    <article class="card"><h2>Lineup considerations</h2><table><thead><tr><th>Player</th><th>Role</th><th>Signal</th></tr></thead><tbody>
+      <tr><td>Jordan Vale</td><td>WR</td><td class="good">Start — strong target share</td></tr>
+      <tr><td>Marcus Reed</td><td>RB</td><td class="warn">Monitor — questionable</td></tr>
+      <tr><td>Eli North</td><td>TE</td><td>Bench — difficult matchup</td></tr>
+    </tbody></table></article>
+    <article class="card"><h2>Waiver watch</h2><p><strong class="good">Theo Banks · WR</strong></p><p class="muted">Three-week usage trend is rising. Consider as depth, but do not drop a stable starter solely on this signal.</p><p><strong>Confidence: moderate</strong></p></article>
+    <article class="card"><h2>Decision trail</h2><ul><li>Compared recent opportunity, matchup, and availability.</li><li>Separated observations from recommendations.</li><li>No transaction or lineup mutation is available.</li></ul></article>
+    <article class="card"><h2>Safety boundary</h2><p class="muted">The future integration will return analysis only. Every lineup change, claim, drop, or trade remains a separate owner action.</p></article>
+  </section>
+</main></body></html>
