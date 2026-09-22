@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs><radialGradient id="g" cx="85%" cy="0%" r="90%"><stop stop-color="#267c60"/><stop offset="1" stop-color="#09111a"/></radialGradient></defs>
+  <rect width="1280" height="640" fill="url(#g)"/><rect x="72" y="72" width="1136" height="496" rx="32" fill="#142231" fill-opacity=".88" stroke="#7ce3bb"/>
+  <text x="120" y="250" fill="#7ce3bb" font-family="system-ui,sans-serif" font-size="28" font-weight="700" letter-spacing="5">READ-ONLY · PRIVACY FIRST</text>
+  <text x="120" y="345" fill="#f3f7fa" font-family="system-ui,sans-serif" font-size="78" font-weight="800">MCP Fantasy</text>
+  <text x="120" y="415" fill="#a9b8c6" font-family="system-ui,sans-serif" font-size="30">Clearer weekly decisions. The owner always acts.</text>
+  <g fill="none" stroke="#7ce3bb" stroke-width="7"><path d="M945 230h105a45 45 0 0 1 45 45v90a45 45 0 0 1-45 45H945a45 45 0 0 1-45-45v-90a45 45 0 0 1 45-45Z"/><path d="M945 320h105M997 275v90"/></g>
+</svg>

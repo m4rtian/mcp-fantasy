@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible problem using fictional or sanitized data.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Do not include credentials, identifiers, or private league data.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Privacy check
+      options:
+        - label: I used only fictional or sanitized data.
+          required: true

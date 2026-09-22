@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Fantasy read-only architecture</title>
+  <desc id="desc">Authorized Yahoo data passes through a local read-only adapter, a sanitization boundary, analysis tools, and an advisory brief. Only the owner can act.</desc>
+  <rect width="1200" height="420" rx="28" fill="#09111a"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="600" y="58" fill="#f3f7fa" font-size="30" font-weight="700">Read-only by design</text>
+    <text x="600" y="90" fill="#a9b8c6" font-size="17">Credentials and private data remain local; recommendations never become actions.</text>
+    <g transform="translate(55 150)">
+      <rect width="205" height="145" rx="18" fill="#142231" stroke="#294054"/>
+      <text x="102" y="60" fill="#f3f7fa" font-size="21" font-weight="700">Yahoo API</text>
+      <text x="102" y="92" fill="#a9b8c6" font-size="15">authorized reads</text>
+    </g>
+    <g transform="translate(345 150)">
+      <rect width="205" height="145" rx="18" fill="#142231" stroke="#7ce3bb"/>
+      <text x="102" y="50" fill="#f3f7fa" font-size="21" font-weight="700">Local adapter</text>
+      <text x="102" y="82" fill="#a9b8c6" font-size="15">allowlisted fields</text>
+      <text x="102" y="106" fill="#a9b8c6" font-size="15">no write methods</text>
+    </g>
+    <g transform="translate(635 150)">
+      <rect width="205" height="145" rx="18" fill="#142231" stroke="#294054"/>
+      <text x="102" y="60" fill="#f3f7fa" font-size="21" font-weight="700">Analysis</text>
+      <text x="102" y="92" fill="#a9b8c6" font-size="15">deterministic signals</text>
+    </g>
+    <g transform="translate(925 150)">
+      <rect width="205" height="145" rx="18" fill="#142231" stroke="#294054"/>
+      <text x="102" y="50" fill="#f3f7fa" font-size="21" font-weight="700">Owner review</text>
+      <text x="102" y="82" fill="#a9b8c6" font-size="15">advisory brief</text>
+      <text x="102" y="106" fill="#7ce3bb" font-size="15">human acts separately</text>
+    </g>
+    <g fill="#7ce3bb" font-size="34"><text x="302" y="235">→</text><text x="592" y="235">→</text><text x="882" y="235">→</text></g>
+    <text x="600" y="360" fill="#f4c95d" font-size="17">No lineup changes · No claims · No drops · No trades</text>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+{
+  "week": 7,
+  "roster": [
+    {"name": "Jordan Vale", "opportunity": 5, "matchup_rating": 4, "injury_status": "healthy"},
+    {"name": "Marcus Reed", "opportunity": 4, "matchup_rating": 4, "injury_status": "questionable"},
+    {"name": "Eli North", "opportunity": 2, "matchup_rating": 2, "injury_status": "healthy"}
+  ],
+  "available": [
+    {"name": "Theo Banks", "usage_trend": "rising"},
+    {"name": "Noah Stone", "usage_trend": "flat"}
+  ]
+}
