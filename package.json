@@ -6,6 +6,7 @@
   "description": "Local read-only MCP connector for Yahoo Fantasy Sports",
   "scripts": {
     "credentials": "node scripts/save-credentials.js",
+    "credentials:ui": "node scripts/credential-ui.js",
     "authorize": "node scripts/authorize.js",
     "check-auth": "node scripts/check-token.js",
     "start:mcp": "node connector/index.js",
