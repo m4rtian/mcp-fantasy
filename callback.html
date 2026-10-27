@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <title>MCP Fantasy Authorization</title>
+  <style>
+    :root { color-scheme: dark; font-family: ui-sans-serif, system-ui, sans-serif; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #07111f; color: #eef6ff; }
+    main { width: min(620px, calc(100% - 40px)); padding: 32px; border: 1px solid #29405f; border-radius: 20px; background: #0d1b2d; box-shadow: 0 24px 80px #0008; }
+    .eyebrow { color: #7ce3bb; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; }
+    h1 { margin: 10px 0; font-size: clamp(1.8rem, 5vw, 2.7rem); }
+    p { color: #b8c7da; line-height: 1.6; }
+    button { margin-top: 16px; border: 0; border-radius: 12px; padding: 13px 18px; background: #7ce3bb; color: #062019; font: inherit; font-weight: 800; cursor: pointer; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    code { display: block; margin-top: 18px; padding: 14px; overflow-wrap: anywhere; border-radius: 10px; background: #07111f; color: #d8e8fb; }
+    .error { color: #ff9d9d; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">MCP Fantasy · Local authorization</div>
+    <h1 id="title">Finishing authorization…</h1>
+    <p id="message">This page does not send your authorization result anywhere. Copy the full callback URL back into the local setup terminal.</p>
+    <button id="copy" type="button" disabled>Copy full callback URL</button>
+    <code id="status">Checking the Yahoo response…</code>
+  </main>
+  <script>
+    const parameters = new URLSearchParams(location.search);
+    const code = parameters.get("code");
+    const error = parameters.get("error");
+    const title = document.getElementById("title");
+    const message = document.getElementById("message");
+    const status = document.getElementById("status");
+    const copy = document.getElementById("copy");
+
+    if (code) {
+      title.textContent = "Yahoo authorization received";
+      status.textContent = "Ready to copy. The authorization code is short-lived and will be exchanged only by your local connector.";
+      copy.disabled = false;
+      copy.addEventListener("click", async () => {
+        await navigator.clipboard.writeText(location.href);
+        copy.textContent = "Copied — return to the setup terminal";
+      });
+    } else {
+      title.textContent = "Authorization was not completed";
+      title.className = "error";
+      message.textContent = "Return to the local setup terminal and start authorization again.";
+      status.textContent = error ? `Yahoo returned: ${error}` : "No authorization code was present.";
+    }
+  </script>
+</body>
+</html>

@@ -3,7 +3,11 @@
 *secret*
 *.pem
 *.key
+credentials/*
+!credentials/*.example.json
 __pycache__/
 *.py[cod]
 .venv/
 *.egg-info/
+node_modules/
+*.log
